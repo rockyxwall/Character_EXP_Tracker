@@ -1,21 +1,31 @@
-# Python Learning & AI Prompting Guidelines
+# Python Learning & AI Prompting (SVG Visual Edition)
 
-This project focuses on understanding Python logic to enable expert-level AI prompting. Use the `notes/` directory to document learnings.
+This project focuses on understanding Python logic via **Visual Flashcards** that work everywhere (offline, mobile, web) using Inline SVGs.
 
-## Note-Taking Structure
-Every note in `notes/*.md` should follow this template to ensure clarity and utility for future AI prompting:
+## Workflow: Note to Flashcard
+1.  **Write Note**: Create/edit a file in `notes/md/*.md` using the "Three-Field" structure (Front, Back, Diagram).
+2.  **Generate SVGs**: Run `python notes/generate_diagrams.py`.
+3.  **Import to Anki**: Import the generated `notes/flash-cards/_all_cards.txt` into Anki.
 
-1.  **Logic Breakdown**: Explain *what* the code is doing in plain English (the "Business Logic").
-2.  **Python Concept**: Identify the technical name (e.g., "List Comprehension", "Dataclass", "Dictionary").
-3.  **Why it Matters for Prompting**: Explain how knowing this term helps you tell an AI exactly what to build.
-4.  **Prompt Example**: A "Golden Prompt" snippet that uses the concept correctly.
+## Visual Flashcard Structure (`notes/md/*.md`)
+-   **## Field: Front**: The question.
+-   **## Field: Back**: Explanation, code, and prompting tips.
+-   **## Field: Diagram**: Pure Mermaid syntax (for automatic SVG generation).
+
+## Anki Setup (Method C - Inline SVG)
+No add-ons or complex templates required!
+- Create a Note Type with fields: `Front` and `Back`.
+- Ensure your Anki Styling section has this to make SVGs look good:
+```css
+svg {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 10px auto;
+}
+```
 
 ## Prompting Principles
--   **Be Explicit about Data Structures**: Instead of "save the stats," say "store the stats in a dictionary with keys STR, VIT, and AGI."
--   **Define the Formula**: Don't just say "calculate EXP," say "calculate EXP using a quadratic formula: level squared times ten."
--   **Specify Validation**: Always tell the AI what to do if input is wrong (e.g., "If the user enters a non-number, catch the error and ask again").
--   **Logic First**: Describe the behavior before the code. "The system should prevent leveling up until a stat reaches 5."
-
-## Directory Map
--   `legacy_code/`: Original scripts for analysis.
--   `notes/`: Educational breakdowns and prompting guides.
+- **Logic-First**: Describe the behavior before asking for code.
+- **Visual Mapping**: Use the Mermaid diagrams as a mental map for your AI instructions.
+- **Explicit Constraints**: Always specify rounding (math.floor) and data types (Dictionaries vs Lists).
