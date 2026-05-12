@@ -1,3 +1,3 @@
 # Name: Forest Wolf
-Level: 2
+Level: 5
 EXP_Reward: 50

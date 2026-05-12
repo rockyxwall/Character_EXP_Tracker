@@ -18,16 +18,9 @@ BAR_LENGTH = 15
 WINDOW_WIDTH = 40
 HEADER_TEXT = "[ STATUS WINDOW ]"
 
-# 4. Starting State (The "Level 1" defaults)
-STARTING_LEVEL = 1
-STARTING_EXP = 0
-DEFAULT_STATS = {
-    "STR": 10,
-    "AGI": 10,
-    "INT": 10,
-    "VIT": 10
-}
-
-# 5. Folder Paths
+# 4. Folder Paths
 CHAR_FOLDER = "characters"
 MONSTER_FOLDER = "monsters"
+
+# 5. Status Block Header
+STATUS_HEADER = "## [ CURRENT STATUS ]"
